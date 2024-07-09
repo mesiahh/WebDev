@@ -1,0 +1,49 @@
+/*Activty 5 Palanas.css file*/
+body {
+    margin: 50px 50px 50px 50px;
+}
+.div1 {
+    border: none;
+    height: 70px;
+    background-color: lightcyan;
+    margin-bottom: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.inside_div {
+    display: flex;
+    margin-bottom: 10px; 
+}
+.div2 {
+    border: none;
+    width: 25%;
+    height: auto;
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+    background-color: rgb(255, 166, 134);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 10px;
+}
+.div3 {
+    border: none;
+    width: 75%;
+    height: auto;
+    margin-bottom: 10px; 
+    background-color: rgb(255, 175, 255);
+    padding: 10px;
+}
+.div4 {
+    border: none;
+    height: 30px;
+    background-color: rgb(197, 255, 138);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
