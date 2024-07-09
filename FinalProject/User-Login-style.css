@@ -19,7 +19,6 @@ body {
 
 .wrapper{
     width: 600px;
-    
     background: rgba(0, 0, 0, 0.5);
     border: 3px solid rgba(255, 255, 255, .3);
     color: #fff;
@@ -53,7 +52,7 @@ body {
 }
 
 .input-box input::placeholder{
-    color: #000000;
+    color: #8b8b8b;
 }
 
 .input-box i{
@@ -62,7 +61,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: black;
+    color: #8b8b8b;
 }
 
 .wrapper .remember-forgot {
@@ -122,7 +121,7 @@ body {
 
 .logo {
     position: absolute;
-    top: 120px; /* Adjust as needed */
+    top: 140px; /* Adjust as needed */
     left: 50.2%;
     transform: translateX(-50%);
     margin-bottom: 50px;
