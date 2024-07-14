@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.75)), url(pic5.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .container1 {
+            height: 85vh;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px 20px 100px;
+        }
+        .navbar1 {
+            display: flex;
+            justify-content: end;
+            width: 50rem;
+        }
+        .navbar1 #a2 {
+            background-color: #730404;
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+            border-radius: 5px;
+            margin-left: 25px;
+            padding: 5px;
+        }
+        .navbar1 #a1 {
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+            border-radius: 5px;
+            margin-left: 25px;
+            padding: 5px;
+        }
+        .navbar1 #a1:hover {
+            background-color: #730404;
+            transition: .5s;
+        }
+        .navbar2 {
+            display: flex;
+            justify-content: start;
+            width: 10rem;
+        }
+        /* I EDITED THIS kay ma change ang margin sad sa tanang sa menu-bar navbar a to class:menu-a i added class nlngsad sa katung parts*/
+        .menu-a {
+            margin-left: 25px;
+            font-size: 20px;
+            color: grey;
+        }
+        .menu-a:hover {
+            color: white;
+            transition: .5s;
+        }
+        .h1 {
+            text-align: center;
+            color: #730404;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .container1 {
+            height: 90vh;
+            padding: 0px 50px;
+            margin-top: 10px;
+        }
+        .b1, .b2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .box1, .box2, .box3, .box4, .box5, .box6 {
+            height: 17rem;
+            width: 23rem;
+            text-align: center;
+            margin: 10px 10px;
+            border-radius: 5px;
+        }
+        .container1 h4{
+            font-size: 18px;
+            margin-top: 6rem;
+            color: white;
+        }
+        .container1 button {
+            outline: none;
+            border: none;
+            background-color: rgba(36, 36, 36, 0.753);
+            border-radius: 5px;
+            width: 70%;
+            height: 30px;
+            color: white;
+        }
+        .container1 button:hover {
+            background-color: rgba(17, 17, 17, 0.829);
+            transition-duration: .3s;
+        }
+        .box1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(servicesPic1.webp) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .box2 {
+            background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(servicesPic2.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .box3 {
+            background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(servicesPic3.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .box4 {
+            background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(servicesPic4.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .box5 {
+            background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(servicesPic5.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .box6 {
+            background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.80)), url(servicesPic6.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #730404a8;
+            height: 16vh;
+            color: white;
+            font-size: 11px;
+            margin-top: 10.5rem;
+        }
+        .footer #p1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /*notif bar edit here*/
+        .notif-bar p {
+            font-size: 10px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        .notif-bar {
+            background-color: black;
+            width: 170px;
+            height: 200px;
+            position: absolute;
+            padding: 10px;
+            right: 85px;
+            border: 1px solid #730404;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            display: none;
+            }
+
+        .notif {
+            width:130px;
+            height: 30px;
+            /* border: 1px solid red; */
+            padding: 2px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+            overflow: hidden; /* Hides overflow content */
+            text-overflow: ellipsis; /* Adds ellipsis (...) to indicate overflow */
+            border-radius: 4px;
+            }
+
+        .notif-bar hr{
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background: #730404;
+            margin-bottom: 5px;
+            
+           
+        }
+        
+        .notif p {
+            font-size: 10px;
+            color: gray;
+        }
+
+
+        /*notif bar end*/
+
+        /* menu bar edit start */
+        .menu-bar {
+            position: absolute;
+            background-color: black;
+            height: 250;
+            width: 200px;
+            right: 50px;
+            padding: 10px;
+            border: 1px solid #730404;
+            display: none;
+        }
+
+
+        .menu-bar i {
+            color: gray;
+            margin-right: 0px;
+        }
+
+        .menu-bar h2{
+            color: gray;
+    
+        }
+        .user-info{
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .user-info h2{
+            font-weight: 500;
+            font-size: 15px;
+            margin: 2px;
+        }
+
+        .menu-bar hr {
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background: gray;
+            margin-bottom: 5px;
+        }
+
+        .sub-menu-link{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: gray;
+            margin-top: 10px;
+        }
+
+        .sub-menu-link:hover{
+            transform: translateX(5px);
+            background-color:#73040486 ;
+        }
+
+        
+
+        .sub-menu-link p{
+            text-align: left;
+            position: absolute;
+            margin-left: 22px;
+        }
+
+        .arrow{
+            position: absolute;
+            margin-left: 170px;
+            
+        }
+
+        
+        
+
+        /* menu bar edit end */
+
+
+
+    </style>
+    <header class="header">
+        <img src="logo.png">
+
+        <nav class="navbar1">
+            <a href="04.HomePageJustin.html" id="a1">HOME</a>
+            <a href="#" id="a2">SERVICES</a>
+            <a href="05.AboutUsPalanas.html" id="a1">ABOUT US</a>
+            <a href="06.PricingPagePalanas.html" id="a1">PRICING</a>
+        </nav>
+        <nav class="navbar2">
+            <div class="notif-sec">
+                <a href="#" id="bell-icon" onclick="toggleNotifBar()"  class="menu-a"><i class='bx bx-bell'></i></a>
+                <div class="notif-bar">
+                    <p>NOTIFICATIONS</p>
+                    <hr>
+                    <div class="notif">
+                        <p>GYMJAMS has added a new equipment.</p>
+                    </div>
+                    <hr>
+                    <div class="notif">
+                        <p>Your subscription is almost expiring.</p>
+                    </div>
+                    <hr>
+                    <div class="notif">
+                        <p>You have been warned by the administrator </p>
+                    </div>
+                    <hr>
+                    <div class="notif">
+                        <p>Your subscription is almost expiring.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#"  class="menu-a"><i class='bx bx-user-circle' ></i></a>
+            <div class="menu-sec">
+                <a href="#" id="bell-icon" onclick="toggleMenuBar()"class="menu-a"><i class='bx bx-menu' ></i></a>
+                <div class="menu-bar">
+                    <div class="user-info">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>User1234</h2>
+                    </div>
+                    <hr>
+            
+                    <a href="User-Login.html" class="sub-menu-link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Logout</p>
+                        <span class="arrow">></span>
+                    </a>
+                </div>
+
+        </nav>
+    </header>
+
+    <h1 class="h1">SERVICES</h1>
+
+    <div class="container1">
+        <div class="b1">
+            <div class="box1">
+                <h4>Womens Workout Room</h4>
+                <button>Learn More</button>
+            </div>
+            <div class="box2">
+                <h4>Cardio Equipment</h4>
+                <button>Learn More</button>
+            </div>
+            <div class="box3">
+                <h4>Strength Training</h4>
+                <button>Learn More</button>
+            </div>
+        </div>
+        <div class="b2">
+            <div class="box4">
+                <h4>Locker & Washing Room</h4>
+                <button>Learn More</button>
+            </div>
+            <div class="box5">
+                <h4>Nutritional Supplements</h4>
+                <button>Learn More</button>
+            </div>
+            <div class="box6">
+                <h4>Beverages</h4>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <p id="p1">Fitness</p>
+            <p>Enjoy daily exercise</p>
+            <p>Be fit and healthy</p>
+        </div>
+        <div>
+            <p id="p1">Location</p>
+            <p>Nasipit Talamban,</p>
+            <p>Cebu City</p>
+        </div>
+        <div>
+            <p id="p1">Call us</p>
+            <p>+0930182031</p>
+            <p>+0930182031</p>
+        </div>
+        <div>
+            <p id="p1">Email us</p>
+            <p>gymjamswonder@gmail.com</p>
+        </div>
+    </footer>
+
+    <script>
+
+        function toggleNotifBar() {
+            var notifBar = document.querySelector('.notif-bar');
+            if (notifBar.style.display === 'none' || notifBar.style.display === '') {
+                notifBar.style.display = 'block';
+            } else {
+                notifBar.style.display = 'none';
+            }
+        }
+
+        function toggleMenuBar() {
+            var menuBar = document.querySelector('.menu-bar');
+            if (menuBar.style.display === 'none' || menuBar.style.display === '') {
+                menuBar.style.display = 'block';
+            } else {
+                menuBar.style.display = 'none';
+            }
+        }       
+    </script>
+</body>
+</html>
