@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.75)), url(pic4.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .login{
+            border: 2px solid grey;
+            border-radius: 20px;
+            padding: 20px;
+            width: 25rem;
+            height: 500px;
+            background: transparent;
+            backdrop-filter: blur(5px);
+        }
+        .login h3{
+            text-align: center;
+            color: #ffff;
+            margin: 30px 0px 10px 0px;
+        }
+        .login .input_to{
+            position: relative;
+            width: 100%;
+            height: 50px;
+        }
+        .input_to input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            background-color: transparent;
+            border-bottom: 2px solid grey;
+            outline: none;
+            color: #ffff;
+            font-size: 15px;
+        }
+        .input_to input::placeholder{
+            font-size: 15px;
+        }
+        .input_to i{
+            position: absolute;
+            top: 30%;
+            transform: translateY(-26%);
+            right: 10px;
+            color: #ffff;
+        }
+        .btn{
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            background-color: #ffff;
+            border: none;
+        }
+        .btn a {
+            text-decoration: none;
+            color: black;
+        }
+        .btn:hover{
+            background-color: #dadada;
+        }
+        #sign{
+            text-align: center;
+            font-size: 15px;
+            color: #ffff;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            height: 3rem;
+        }
+        .or-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            margin: 20px 0;
+        }
+        .or-divider:before,
+        .or-divider:after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #fff;
+        }
+
+        .or-text {
+            padding: 0 10px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        .icons{
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+            font-size: 25px;
+            width: 100%;
+        }
+        .icons i{
+            margin: 5px 0px 0px 5px;
+            padding: 0px 10px;
+        }
+        .icons #fb{
+            color: rgb(38, 38, 252);
+        }
+        .icons #gl{
+            color: rgb(250, 60, 27) ;
+        }
+        .icons #tw{
+            color: rgb(8, 160, 255);
+        }
+        .icons #fb:hover{
+            color: white;
+            transition-duration: .5s;
+        }
+        .icons #gl:hover{
+            color: white;
+            transition-duration: .5s;
+        }
+        .icons #tw:hover{
+            color: white;
+            transition-duration: .5s;
+        }
+        .register-link{
+            font-size: 14.5px;
+            text-align: center;
+            margin: 15px 15px ;
+            color: white;
+        }
+        .register-link p a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+   <form action="1userloginVon.html">
+    <div class="login">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <h3>Sign Up</h1>            
+        <div class="input_to">
+            <input type="text" placeholder="Username" required>
+        </div>
+        <div class="input_to">
+            <input  type="email" placeholder="Email or phone number" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input_to">
+            <input  type="password" placeholder="Password" required>
+            <i class='bx bxs-lock'></i>
+        </div>
+        <div class="input_to">
+            <input  type="password" placeholder=" Confirm Password" required>
+            <i class='bx bx-hide' ></i>
+        </div>
+        <button class="btn" type="submit"><a href="04.HomePageJustin.html">Join now</a></button>
+        <div class="register-link">
+            <p>Have an account already? <a href="01.UserLoginPage.html">Sign in</a></p>
+        </div>
+        <div class="or-divider">
+            <span class="or-text">Or</span>
+        </div>
+        <p id="sign">Sign Up Using</p>
+        <div class="icons">
+            <i class='bx bxl-facebook-circle' id="fb"></i>
+            <i class='bx bxl-google' id="gl"></i>
+            <i class='bx bxl-twitter' id="tw"></i>
+        </div>
+    </div>
+   </form>
+</body>
+</html>

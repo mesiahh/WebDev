@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<style>
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.75)), url(pic5.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px 20px 100px;
+        }
+        .navbar1 {
+            display: flex;
+            justify-content: end;
+            width: 50rem;
+        }
+        .navbar1 #a2 {
+            background-color: #730404;
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+            border-radius: 5px;
+            margin-left: 25px;
+            padding: 5px;
+        }
+        .navbar1 #a1 {
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+            border-radius: 5px;
+            margin-left: 25px;
+            padding: 5px;
+        }
+        .navbar1 #a1:hover {
+            background-color: #730404;
+            transition: .5s;
+        }
+        .navbar2 {
+            display: flex;
+            justify-content: start;
+            width: 10rem;
+        }
+        
+        /* I EDITED THIS kay ma change ang margin sad sa tanang sa menu-bar <a> to class:menu-a */
+        .menu-a {
+            margin-left: 25px;
+            font-size: 20px;
+            color: grey;
+        }
+        .menu-a:hover {
+            color: white;
+            transition: .5s;
+        }
+        h1 {
+            color: #730404;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .container1{
+            display: flex;
+            justify-content: center;
+        }
+        .container1 div{
+            width: 40%;
+            height: 5rem;
+            margin: 10px 20px 0px 20px;
+            color: white;
+            margin: 10px 20px 0px 20px;
+        }
+        h3 {
+            text-align: center;
+            color: #730404;
+        }
+        .container2{
+            display: flex;
+            justify-content: center;
+        }
+        .container2 div{
+            width: 40%;
+            height: 5rem;
+            margin: 10px 20px 0px 20px;
+            color: white;
+            margin: 10px 20px 0px 20px;
+        }
+        .container3{
+            display: flex;
+            justify-content: center;
+        }
+        .container3 div{
+            width: 40%;
+            height: 5rem;
+            margin: 10px 20px 0px 20px;
+            color: white;
+            margin: 10px 20px 0px 20px;
+        }
+        .container4{
+            display: flex;
+            justify-content: center;
+        }
+        .container4 div{
+            width: 40%;
+            height: 5rem;
+            margin: 10px 20px 0px 20px;
+            color: white;
+            margin: 10px 20px 0px 20px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #730404a8;
+            height: 16vh;
+            color: white;
+            font-size: 11px;
+            margin-top: 13rem;
+        }
+        .footer #p1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .footer a {
+            text-decoration: none;
+            color: white;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .notif-bar p {
+            font-size: 10px;
+            color: gray;
+            margin-bottom: 10px;
+        }
+
+        .notif-bar {
+            background-color: black;
+            width: 170px;
+            height: 200px;
+            position: absolute;
+            padding: 10px;
+            right: 85px;
+            border: 1px solid #730404;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            display: none;
+            }
+
+        .notif {
+            width:130px;
+            height: 30px;
+            /* border: 1px solid red; */
+            padding: 2px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+            overflow: hidden; /* Hides overflow content */
+            text-overflow: ellipsis; /* Adds ellipsis (...) to indicate overflow */
+            border-radius: 4px;
+            }
+
+        .notif-bar hr{
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background: #730404;
+            margin-bottom: 5px;
+            
+           
+        }
+        
+        .notif p {
+            font-size: 10px;
+            color: gray;
+        }
+/* menu bar edit start */
+.menu-bar {
+            position: absolute;
+            background-color: black;
+            height: 250;
+            width: 200px;
+            right: 50px;
+            padding: 10px;
+            border: 1px solid #730404;
+            display: none;
+        }
+
+
+        .menu-bar i {
+            color: gray;
+            margin-right: 0px;
+        }
+
+        .menu-bar h2{
+            color: gray;
+    
+        }
+        .user-info{
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .user-info h2{
+            font-weight: 500;
+            font-size: 15px;
+            margin: 2px;
+        }
+
+        .menu-bar hr {
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background: gray;
+            margin-bottom: 5px;
+        }
+
+        .sub-menu-link{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: gray;
+        }
+
+        .sub-menu-link:hover{
+            transform: translateX(5px);
+            background-color:#73040486 ;
+        }
+        .sub-menu-link p{
+            text-align: left;
+            position: absolute;
+            margin-left: 22px;
+        }
+        .arrow{
+            position: absolute;
+            margin-left: 170px;
+            
+        }
+        .footer a {
+            text-decoration: none;
+            color: white;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* menu bar edit end */
+        
+</style>
+<body>
+    <header class="header">
+        <img src="logo.png">
+
+        <nav class="navbar1">
+            <a href="04.HomePageJustin.html" id="a1">HOME</a>
+            <a href="07.ServicesPageJustin.html" id="a1">SERVICES</a>
+            <a href="05.AboutUsPalanas.html" id="a1">ABOUT US</a>
+            <a href="06.PricingPagePalanas.html" id="a1">PRICING</a>
+        </nav>
+        <nav class="navbar2">
+            <!-- <a href="#"><i class='bx bx-bell'></i></a> -->
+            <div class="notif-sec">
+                <a href="#" id="bell-icon" onclick="toggleNotifBar()" class="menu-a"><i class='bx bx-bell'></i></a>
+                <div class="notif-bar">
+                    <p>NOTIFICATIONS</p>
+                    <hr>
+                    <div class="notif">
+                        <p>GYMJAMS has added a new equipment.</p>
+                    </div>
+                    <hr>
+                    <div class="notif">
+                        <p>Your subscription is almost expiring.</p>
+                    </div>
+                    <hr>
+                    <div class="notif">
+                        <p>You have been warned by the administrator </p>
+                    </div>
+                    <hr>
+                    <div class="notif">
+                        <p>Your subscription is almost expiring.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-sec">
+                <a href="#" id="bell-icon" onclick="toggleMenuBar()"class="menu-a"><i class='bx bx-menu' ></i></a>
+                <div class="menu-bar">
+                    <div class="user-info">
+                        <a href="8userprofileKeanu.html" class="sub-menu-link">
+                            <i class="fa-solid fa-user"></i>
+                            <h2>User1234</h2>
+                        </a>
+                    </div>
+                    <hr>
+
+                    <a href="01.UserLoginPage.html" class="sub-menu-link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Logout</p>
+                        <span class="arrow">></span>
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <div class="main_container">
+        <h1>TERMS OF SERVICE (ToS)</h1>
+        <div class="container1">
+            <div>
+                <h3>Website Usage</h3>
+                <p>Our website facilitates subscription management and attendance tracking for Gym Jams. You must be at least 13 years old to use our services.</p>
+            </div>
+            <div>
+                <h3>User Accounts</h3>
+                <p>To use our services, you must create an account with accurate information and keep your login credentials secure. You are responsible for all activities that occur under your account.</p>
+            </div>
+        </div>
+        <div class="container2">
+            <div>
+                <h3>User Conduct</h3>
+                <p>You agree to use our services only for lawful purposes and in accordance with these Terms. You will not engage in any illegal or abusive activities on our platform.</p>
+            </div>
+            <div>
+                <h3>Privacy</h3>
+                <p>We respect your privacy and handle your personal information according to our Privacy Policy.</p>
+            </div>
+        </div>
+        <div class="container3">
+            <div>
+                <h3>Intellectual Property</h3>
+                <p>The content on our website, including text and graphics, is protected by intellectual property laws. You retain ownership of content you upload, but grant us a license to use it for our services.</p>
+            </div>
+            <div>
+                <h3>Limitation of Liability</h3>
+                <p>We provide our services "as is" and are not liable for any indirect, incidental, or consequential damages arising from your use of our website.</p>
+            </div>
+        </div>
+        <div class="container4">
+            <div>
+                <h3>Modifications</h3>
+                <p>We may update these Terms from time to time. Continued use of our website after changes constitutes acceptance of the updated Terms.</p>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p>If you have any questions or concerns about these Terms, please contact us at gymjamswonder@gmail.com
+                    By using our website, you agree to these Terms of Service. If you do not agree, please refrain from using our services.
+                    </p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <a href="#"><p id="p1">TERMS OF SERVICE (ToS)</p></a>
+        </div>
+        <div>
+            <p id="p1">Location</p>
+            <p>Nasipit Talamban,</p>
+            <p>Cebu City</p>
+        </div>
+        <div>
+            <p id="p1">Call us</p>
+            <p>+0930182031</p>
+            <p>+0930182031</p>
+        </div>
+        <div>
+            <p id="p1">Email us</p>
+            <p>gymjamswonder@gmail.com</p>
+        </div>
+    </footer>
+    
+    <script>
+        function subButt (pressSub) {
+            const button = document.querySelector ('.' + pressSub);
+
+            if (button.innerHTML === 'Subscribe') {
+                button.innerHTML = 'Subscribed!';
+                button.style = "background-color: grey;"
+            } else {
+                button.innerHTML = 'Subscribe';
+                button.style = "background-color: red;"
+            }
+        }
+
+        function toggleNotifBar() {
+            var notifBar = document.querySelector('.notif-bar');
+            if (notifBar.style.display === 'none' || notifBar.style.display === '') {
+                notifBar.style.display = 'block';
+            } else {
+                notifBar.style.display = 'none';
+            }
+        }
+
+        function toggleMenuBar() {
+            var menuBar = document.querySelector('.menu-bar');
+            if (menuBar.style.display === 'none' || menuBar.style.display === '') {
+                menuBar.style.display = 'block';
+            } else {
+                menuBar.style.display = 'none';
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
